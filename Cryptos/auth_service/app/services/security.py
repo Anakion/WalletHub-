@@ -3,7 +3,6 @@ from datetime import timedelta, datetime
 import jwt
 from argon2 import (PasswordHasher,
                     exceptions)
-from requests import session
 
 from Cryptos.auth_service.app.core.config import settings
 
