@@ -3,7 +3,7 @@ from sqlalchemy.ext.asyncio import (create_async_engine,
                                     async_sessionmaker,
                                     AsyncSession)
 
-from Cryptos.auth_service.app.core import settings
+from Cryptos.auth_service.app.core.config import settings
 
 async_engine = create_async_engine(settings.PATH_DB)
 AsyncSessionLocal = async_sessionmaker(
