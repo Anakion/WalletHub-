@@ -29,7 +29,7 @@ async def create_user(db: AsyncSession, user: RegisterUser) -> Dict[str, str]:
 
     # Generation JWT token
 
-    access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token_expires = timedelta(minutes=settings.toml_settings.ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = create_access_token(
         data={"sub": user.email}, expires_delta=access_token_expires
     )

@@ -62,6 +62,7 @@ class Settings(EnvSettings):
 
 
 settings = Settings()
+print(settings.SECRET_KEY)
 
 
 
